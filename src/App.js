@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from "./components/Card";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Card>
+      <Card.Header>
+        <span>Card Title</span>
+      </Card.Header>
+      <Card.Body>Card body</Card.Body>
+      <Card.Footer>
+        <p>this is the footer</p>
+      </Card.Footer>
+    </Card>
   );
 }
+// we do not have to use all card children, we can remove card.footer or others if we want
+// we can also reorder the children, for example the Card.header can be bellow Card.body or Card.Footer
 
 export default App;
